@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Collision Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <h1>Collision Detection</h1>
+
+    <p class="code">
+        <span class="exp">objectsTouchingHorizontally</span> = <span class="exp">object1RightSide &gt;= object2LeftSide</span> &amp;&amp; <span class="exp highlighted">object1LeftSide &lt;= object2RightSide</span>
+    </p>
+    <p class="code">
+        <span class="exp">objectsTouchingVertically</span> = <span class="exp">object1BottomSide &gt;= object2TopSide</span> &amp;&amp; <span class="exp highlighted">object1TopSide &lt;= object2BottomSide</span>
+    </p>
+    <p class="code">
+        <span class="exp">objectsTouching</span> = <span class="exp">objectsTouchingHorizontally</span> &amp;&amp; <span class="exp">objectsTouchingVertically</span>
+    </p>
+
+    <div id="box">
+        <div id="object1">object 1</div>
+        <div id="object2">object 2</div>
+
+        <p id="instructions">
+            Use the arrow keys to move object 1. The objects will turn <span id="color">green</span> when they touch.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
