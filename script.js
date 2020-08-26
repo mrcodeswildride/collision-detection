@@ -41,8 +41,8 @@ function touching(object1, object2) {
   let object2Top = object2.offsetTop
   let object2Bottom = object2.offsetTop + object2.offsetHeight
 
-  let xLinesUp = object1Right >= object2Left && object1Left <= object2Right
-  let yLinesUp = object1Bottom >= object2Top && object1Top <= object2Bottom
+  let xLinesUp = object1Left <= object2Right && object1Right >= object2Left
+  let yLinesUp = object1Top <= object2Bottom && object1Bottom >= object2Top
 
   for (let expression of expressions) {
     expression.classList.remove(`highlighted`)
@@ -53,11 +53,11 @@ function touching(object1, object2) {
     expressions[7].classList.add(`highlighted`)
   }
 
-  if (object1Right >= object2Left) {
+  if (object1Left <= object2Right) {
     expressions[1].classList.add(`highlighted`)
   }
 
-  if (object1Left <= object2Right) {
+  if (object1Right >= object2Left) {
     expressions[2].classList.add(`highlighted`)
   }
 
@@ -66,11 +66,11 @@ function touching(object1, object2) {
     expressions[8].classList.add(`highlighted`)
   }
 
-  if (object1Bottom >= object2Top) {
+  if (object1Top <= object2Bottom) {
     expressions[4].classList.add(`highlighted`)
   }
 
-  if (object1Top <= object2Bottom) {
+  if (object1Bottom >= object2Top) {
     expressions[5].classList.add(`highlighted`)
   }
 
