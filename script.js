@@ -7,24 +7,24 @@ document.addEventListener(`keydown`, keyPressed)
 function keyPressed(event) {
   event.preventDefault()
 
-  if (event.keyCode == 37) { // left arrow
+  if (event.keyCode == 37) {
+    // left arrow
     object1.style.left = `${object1.offsetLeft - 5}px`
-  }
-  else if (event.keyCode == 38) { // up arrow
+  } else if (event.keyCode == 38) {
+    // up arrow
     object1.style.top = `${object1.offsetTop - 5}px`
-  }
-  else if (event.keyCode == 39) { // right arrow
+  } else if (event.keyCode == 39) {
+    // right arrow
     object1.style.left = `${object1.offsetLeft + 5}px`
-  }
-  else if (event.keyCode == 40) { // down arrow
+  } else if (event.keyCode == 40) {
+    // down arrow
     object1.style.top = `${object1.offsetTop + 5}px`
   }
 
   if (touching(object1, object2)) {
     object1.classList.add(`highlighted`)
     object2.classList.add(`highlighted`)
-  }
-  else {
+  } else {
     object1.classList.remove(`highlighted`)
     object2.classList.remove(`highlighted`)
   }

@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Collision Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Collision Detection</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Collision Detection</h1>
 
-	</script>
-</head>
-
-<body>
-	<h1>Collision Detection</h1>
-
-	<p class="code">
-		<span class="exp">xLinesUp</span> = <span class="exp highlighted">object1Left &lt;= object2Right</span> &amp;&amp;
-    <span class="exp">object1Right &gt;= object2Left</span>
-  </p>
-
-  <p class="code">
-    <span class="exp">yLinesUp</span> = <span class="exp highlighted">object1Top &lt;= object2Bottom</span> &amp;&amp;
-    <span class="exp">object1Bottom &gt;= object2Top</span>
-  </p>
-
-  <p class="code">
-    <span class="exp">objectsTouching</span> = <span class="exp">xLinesUp</span> &amp;&amp;
-    <span class="exp">yLinesUp</span>
-  </p>
-
-  <div id="box">
-    <div id="object1">object 1</div>
-    <div id="object2">object 2</div>
-
-    <p id="instructions">
-      Use the arrow keys to move object 1. The objects will turn <span id="color">green</span> when they touch.
+    <p class="code">
+      <span class="exp">xLinesUp</span> =
+      <span class="exp highlighted">object1Left &lt;= object2Right</span> &amp;&amp;
+      <span class="exp">object1Right &gt;= object2Left</span>
     </p>
-  </div>
-</body>
 
+    <p class="code">
+      <span class="exp">yLinesUp</span> =
+      <span class="exp highlighted">object1Top &lt;= object2Bottom</span> &amp;&amp;
+      <span class="exp">object1Bottom &gt;= object2Top</span>
+    </p>
+
+    <p class="code">
+      <span class="exp">objectsTouching</span> = <span class="exp">xLinesUp</span> &amp;&amp;
+      <span class="exp">yLinesUp</span>
+    </p>
+
+    <div id="box">
+      <div id="object1">object 1</div>
+      <div id="object2">object 2</div>
+
+      <p id="instructions">
+        Use the arrow keys to move object 1. The objects will turn
+        <span id="color">green</span> when they touch.
+      </p>
+    </div>
+  </body>
 </html>
